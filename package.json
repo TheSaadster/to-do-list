@@ -1,0 +1,28 @@
+{
+  "name": "to-do-list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheSaadster/to-do-list.git"
+  },
+  "author": "Saad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheSaadster/to-do-list/issues"
+  },
+  "homepage": "https://github.com/TheSaadster/to-do-list#readme",
+  "keywords": [],
+  "devDependencies": {
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
