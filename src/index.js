@@ -1,11 +1,33 @@
-import { blankProject } from "./blank-project";
-import { initialDomManip } from "./initial-dom-manip";
-import { createToDo } from "./create-to-do";
-blankProject();
+import {createEventListener} from "./creatingProject";
+import { listEvent} from "./creatingTask";
+import { editContainerEventListener} from "./editingProject";
+import {dragAndDropEvent} from "./dragAndDrop";
+import {displayAllTasks} from "./homeSection";
 
-initialDomManip();
+listEvent();
+createEventListener();
+editContainerEventListener();
+dragAndDropEvent();
+displayAllTasks();
 
-let myToDo = createToDo("Grocery Run", "Go get groceries", "9/26/2022", "Low", "Meat, Eggs, Milk");
-let myToDo2 = createToDo("HW", "Do homework", "9/28/2022", "High", "Math, English, CMSC");
-console.log("Properties of myToDo.......", myToDo);
-console.log("Properties of myToDo2.......", myToDo2);
+//hide side menu event listener
+const hiddenMenu = document.querySelector(".hiddenMenu");
+hiddenMenu.addEventListener("click", ()=>{
+    const leftPanel = document.querySelector(".leftPanel");
+    leftPanel.classList.toggle("hidden");
+});
+
+
+//on start up checked wheather its on light mode or dark mode
+const checkbox = document.getElementById("checkbox");
+if(checkbox.checked === true){
+    document.body.classList.add("light");
+}
+else{
+    document.body.classList.remove("light");
+}
+
+//event listener for every time the dark mode toggle change
+checkbox.addEventListener("change", () =>{
+    document.body.classList.toggle("light");
+})
